@@ -1,6 +1,6 @@
 <div align="center">
 
-![alt](./images/uniplugin.png1)
+![alt](./images/uniplugin1.png)
 # UniPlugin: Plugins, unified.
   
 </div>
