@@ -3,6 +3,7 @@ gitRepoUrl = "https://github.com/athar-adv/UniPlugin"
 
 gitSourceBranch = "main"
 changelog = true
+docs = "docs_md"
 
 [home]
 enabled = true
