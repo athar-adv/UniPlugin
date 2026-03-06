@@ -1,0 +1,33 @@
+title = "UniPlugin"
+gitRepoUrl = "https://github.com/athar-adv/UniPlugin"
+
+gitSourceBranch = "main"
+changelog = true
+
+[home]
+enabled = true
+bannerImage = "banner.svg"
+
+[[home.features]]
+title = "Easy to Use"
+description = "You can import/export public Plugin APIs in only a few lines of code."
+
+[[home.features]]
+title = "Robust"
+description = "All cases are handled for you. All you have to do is interact with the UniPlugin API and everything will work fine."
+
+[[home.features]]
+title = "Lightweight"
+description = "The entire module is only 1 file, making it very easy to include in projects, and the UniPlugin class itself only has the most essential components and methods to make public Plugin APIs easy to do."
+
+[navbar]
+title = "UniPlugin"
+
+[navbar.logo]
+src = "uniplugin.svg"
+alt = "UniPlugin"
+
+[[navbar.items]]
+href = "https://discord.com/channels/385151591524597761/1479229664634343646"
+label = "Discord (ROSS Thread)"
+position = "right"

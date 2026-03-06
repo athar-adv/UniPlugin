@@ -1,0 +1,17 @@
+:root {
+    --ifm-navbar-height: 6rem !important;
+}
+
+.navbar__logo {
+    flex: 0 0 auto;
+    height: 4rem !important;
+    margin-right: 0.5rem;
+}
+
+.navbar__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    font-size: xx-large;
+}

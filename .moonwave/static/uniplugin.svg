@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="179mm"
+   height="172mm"
+   viewBox="0 0 179 172"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="uniplugin.png"
+   inkscape:export-xdpi="40"
+   inkscape:export-ydpi="40"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   sodipodi:docname="uniplugin.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.65477693"
+     inkscape:cx="287.12068"
+     inkscape:cy="478.78901"
+     inkscape:window-width="1920"
+     inkscape:window-height="974"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient9"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#1952bd;stop-opacity:1;"
+         offset="0"
+         id="stop9" />
+      <stop
+         style="stop-color:#1f3b60;stop-opacity:1;"
+         offset="1"
+         id="stop10" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient9"
+       id="linearGradient10"
+       x1="152.00775"
+       y1="154.29358"
+       x2="116.57738"
+       y2="193.72417"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-8.8897961,-37.983674)" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="rect1"
+       style="fill:#c0332b;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.637165;stroke-miterlimit:1.5;stroke-dasharray:none"
+       d="M 10.57775,12.37191 V 43.631499 H 1.0093414 V 62.592096 H 10.57775 v 27.3141 h 31.148486 v 9.744618 h 18.9606 V 89.906196 H 88.113069 V 71.582766 H 75.371211 V 58.173764 H 88.113069 V 46.482488 H 75.371211 V 33.073487 H 88.113069 V 12.37191 Z" />
+    <path
+       id="rect3"
+       style="fill:#32f343;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.8143;stroke-miterlimit:1.5;stroke-dasharray:none"
+       d="m 128.00262,0.13647994 a 12.000612,12.000612 0 0 0 -12.0003,12.00030206 12.000612,12.000612 0 0 0 0.002,0.235644 H 90.014245 V 34.239308 H 77.891987 V 46.717099 H 90.014245 V 59.239332 H 77.891987 v 12.477794 h 12.122258 v 18.1901 h 25.988075 a 12.000612,12.000612 0 0 0 0,0.0295 12.000612,12.000612 0 0 0 12.0003,12.000814 12.000612,12.000612 0 0 0 12.00082,-12.000814 12.000612,12.000612 0 0 0 0,-0.0295 h 27.5456 v -77.5348 h -27.54767 a 12.000612,12.000612 0 0 0 0.002,-0.235644 12.000612,12.000612 0 0 0 -12.00082,-12.00030206 z" />
+    <path
+       id="rect8"
+       style="fill:url(#linearGradient10);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.8143;stroke-miterlimit:1.5;stroke-dasharray:none"
+       d="m 90.014245,91.747426 v 29.567184 a 12.000612,12.000612 0 0 0 -0.07028,-5.2e-4 12.000612,12.000612 0 0 0 -12.000818,12.00082 12.000612,12.000612 0 0 0 12.000818,12.00082 12.000612,12.000612 0 0 0 0.07028,-5.2e-4 v 23.96701 h 77.534795 v -26.48624 h 9.72861 v -18.9606 h -9.72861 V 91.747426 h -27.5518 a 12.000612,12.000612 0 0 1 0.006,0.38912 12.000612,12.000612 0 0 1 -12.00082,12.000814 12.000612,12.000612 0 0 1 -12.0003,-12.000814 12.000612,12.000612 0 0 1 0.006,-0.38912 z" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36.2178px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-miterlimit:1.5;stroke-dasharray:none;stroke-opacity:1"
+       x="14.564083"
+       y="65.47155"
+       id="text10"><tspan
+         sodipodi:role="line"
+         id="tspan10"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36.2178px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+         x="14.564083"
+         y="65.47155">Uni</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36.2178px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-miterlimit:1.5;stroke-dasharray:none;stroke-opacity:1"
+       x="99.764313"
+       y="65.47155"
+       id="text12"><tspan
+         sodipodi:role="line"
+         id="tspan12"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36.2178px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:#ffffff;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+         x="99.764313"
+         y="65.47155">Plu</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36.2178px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-miterlimit:1.5;stroke-dasharray:none;stroke-opacity:1"
+       x="101.16427"
+       y="146.97136"
+       id="text13"><tspan
+         sodipodi:role="line"
+         id="tspan13"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36.2178px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+         x="101.16427"
+         y="146.97136">gin</tspan></text>
+  </g>
+</svg>
