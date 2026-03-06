@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="plugin-moonwave plugin-id-moonwave" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.7.0">
+<title data-rh="true">UniPlugin | UniPlugin</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://athar-adv.github.io/UniPlugin/api/UniPlugin"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><meta data-rh="true" property="og:title" content="UniPlugin | UniPlugin"><meta data-rh="true" name="description" content="Wraps a Roblox `Plugin` instance to provide a shared
+export/import system between plugins."><meta data-rh="true" property="og:description" content="Wraps a Roblox `Plugin` instance to provide a shared
+export/import system between plugins."><link data-rh="true" rel="canonical" href="https://athar-adv.github.io/UniPlugin/api/UniPlugin"><link data-rh="true" rel="alternate" href="https://athar-adv.github.io/UniPlugin/api/UniPlugin" hreflang="en"><link data-rh="true" rel="alternate" href="https://athar-adv.github.io/UniPlugin/api/UniPlugin" hreflang="x-default"><link rel="stylesheet" href="/UniPlugin/assets/css/styles.f2591ce6.css">
+<script src="/UniPlugin/assets/js/runtime~main.aed0e281.js" defer="defer"></script>
+<script src="/UniPlugin/assets/js/main.41493ff9.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();null!==e?t(e):window.matchMedia("(prefers-color-scheme: dark)").matches?t("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,t("light"))}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/UniPlugin/"><div class="navbar__logo"><img src="/UniPlugin/uniplugin.svg" alt="UniPlugin" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/UniPlugin/uniplugin.svg" alt="UniPlugin" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">UniPlugin</b></a><a class="navbar__item navbar__link" href="/UniPlugin/docs/intro">Docs</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/UniPlugin/api/">API</a></div><div class="navbar__items navbar__items--right"><a href="https://discord.com/channels/385151591524597761/1479229664634343646" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Discord (ROSS Thread)<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><a href="https://github.com/athar-adv/UniPlugin" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite" aria-pressed="false"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><div class="navbar__search"><span aria-label="expand searchbar" role="button" class="search-icon" tabindex="0"></span><input id="search_input_react" type="search" placeholder="Loading..." aria-label="Search" class="navbar__search-input search-bar" disabled=""></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0 docPageContainer_wNNk"><div class="docPage_Dpn1"><div class="docSidebarContainer_o_re"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/UniPlugin/api/UniPlugin">​Uni​Plugin</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/UniPlugin/api/UniPluginConnection">​Uni​Plugin​Connection</a></li></ul></nav></div></div><main class="docMainContainer_HJE1"><div class="container padding-vert--lg"><div class="row"><div class="col docItemCol_MU3C"><div class="docItemContainer_Wv98"><article><div class="member_J0w1 markdown"><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_oUs_"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><header><h1 class="docTitle_mZRt" style="text-decoration:none"><span style="display:inline-block">Uni</span><span style="display:inline-block">Plugin</span></h1><div class="luaClassTags_EipM"></div><div>
+<p>
+  Wraps a Roblox <code>Plugin</code> instance to provide a shared
+  export/import system between plugins.
+</p>
+</div></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="types">Types<a href="#types" class="hash-link" aria-label="Direct link to Types" title="Direct link to Types">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Api"><code style="text-decoration:none">Api</code><a href="#Api" class="hash-link" aria-label="Direct link to Api" title="Direct link to Api">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/athar-adv/UniPlugin/blob/main/src/init.luau#L15"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code class="purple_ieR2">type</code> <code>Api<!-- --> = </code> <code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">string</code><code>]</code></span><code>: </code><code class="blue_P4bS">any</code><code class="purple_ieR2">}</code></div><div>
+<p>A publicly exported interface for the UniPlugin.</p>
+</div><h2 class="anchor anchorWithStickyNavbar_LWe7" id="properties">Properties<a href="#properties" class="hash-link" aria-label="Direct link to Properties" title="Direct link to Properties">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="plugin"><code style="text-decoration:none">plugin</code><a href="#plugin" class="hash-link" aria-label="Direct link to plugin" title="Direct link to plugin">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/athar-adv/UniPlugin/blob/main/src/init.luau#L41"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>UniPlugin<!-- -->.<!-- -->plugin<!-- -->:<!-- --> </code> <code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Plugin" target="_blank" rel="noopener noreferrer">Plugin<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code></div><div>
+<p>The Plugin this UniPlugin is associated with.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="apis"><code style="text-decoration:none">apis</code><a href="#apis" class="hash-link" aria-label="Direct link to apis" title="Direct link to apis">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/athar-adv/UniPlugin/blob/main/src/init.luau#L46"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>UniPlugin<!-- -->.<!-- -->apis<!-- -->:<!-- --> </code> <code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">string</code><code>]</code></span><code>: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/UniPlugin/api/UniPlugin#Api">Api</a></code><code class="purple_ieR2">}</code></div><div>
+<p>All registered public apis.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="isClosed"><code style="text-decoration:none">isClosed</code><a href="#isClosed" class="hash-link" aria-label="Direct link to isClosed" title="Direct link to isClosed">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/athar-adv/UniPlugin/blob/main/src/init.luau#L51"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>UniPlugin<!-- -->.<!-- -->isClosed<!-- -->:<!-- --> </code> <code class="blue_P4bS">boolean</code></div><div>
+<p>If <code>UniPlugin:close()</code> has been called. If this is true, calling any method will throw an error.</p>
+</div><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a href="#functions" class="hash-link" aria-label="Direct link to Functions" title="Direct link to Functions">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="exportAs"><code style="text-decoration:none">exportAs</code><a href="#exportAs" class="hash-link" aria-label="Direct link to exportAs" title="Direct link to exportAs">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/athar-adv/UniPlugin/blob/main/src/init.luau#L119"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>UniPlugin<!-- -->.</code><code class="green_DgR4">exportAs</code><code>(</code><div class="inset_uKQm"><div><code>self<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/UniPlugin/api/UniPlugin">UniPlugin</a></code><code>,</code></div><div><code>alias<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
+<p>The name to register this plugin under</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/UniPlugin/api/UniPluginConnection">UniPluginConnection</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>A connection that can be closed to unregister the export</p>
+</span></span></div><div>
+<p>
+  Registers this UniPlugin under <code>alias</code> in the shared exports table, making
+  it discoverable by other plugins calling <code>withImports</code>. Fires the global
+  ExportOpened event so any waiting <code>withImports</code> listeners are unblocked.
+</p>
+<p>
+  The returned listener's <code>close</code> removes the export and can be called
+  manually; it is also called automatically when the plugin unloads or is
+  destroyed.
+</p>
+<p><strong>Example Usage:</strong></p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> UniPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span>to<span class="token punctuation">.</span>module<span class="token punctuation">)</span><span class="token punctuation">(</span>plugin<span class="token punctuation">)</span>
+
+UniPlugin<span class="token punctuation">:</span><span class="token function">setApi</span><span class="token punctuation">(</span><span class="token string">"output"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+	print <span class="token operator">=</span> print<span class="token punctuation">,</span>
+	warn <span class="token operator">=</span> warn<span class="token punctuation">,</span>
+	error <span class="token operator">=</span> error
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+UniPlugin<span class="token punctuation">:</span><span class="token function">setApi</span><span class="token punctuation">(</span><span class="token string">"requireInMyContext"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+	execute <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>module<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token function">require</span><span class="token punctuation">(</span>module<span class="token punctuation">)</span> <span class="token keyword">end</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+UniPlugin<span class="token punctuation">:</span><span class="token function">exportAs</span><span class="token punctuation">(</span><span class="token string">"athar-adv/MyPlugin"</span><span class="token punctuation">)</span>
+</code></pre>
+</div><h3>Errors</h3><table class="errorTable_jfN8"><thead><tr><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>&quot;UniPlugin &#x27;{self.plugin.Name}&#x27; is closed, cannot call UniPlugin:exportAs(...)&quot;</td><td>Occurs if UniPlugin.isClosed is true.</td></tr></tbody></table><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="withImports"><code style="text-decoration:none">withImports</code><a href="#withImports" class="hash-link" aria-label="Direct link to withImports" title="Direct link to withImports">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/athar-adv/UniPlugin/blob/main/src/init.luau#L191"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>UniPlugin<!-- -->.</code><code class="green_DgR4">withImports</code><code>(</code><div class="inset_uKQm"><div><code>self<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/UniPlugin/api/UniPlugin">UniPlugin</a></code><code>,</code></div><div><code>aliases<!-- -->: </code><code class="purple_ieR2">{</code><code class="blue_P4bS">string</code><code class="purple_ieR2">}</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>List of plugin export aliases to wait for</p>
+</span></span></div><div><code>handler<!-- -->: </code><code class="purple_ieR2">(</code><div class="inset_uKQm"><code>plugins<!-- -->: </code><code class="green_DgR4">(</code><code class="green_DgR4">)</code><code class="green_DgR4"> → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/UniPlugin/api/UniPlugin">...UniPlugin</a></code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"><code>bindOnImportClosed<!-- -->: </code><code class="green_DgR4">(</code><code>fn<!-- -->: </code><code class="yellow_QJap">(</code><code class="yellow_QJap">)</code><code class="yellow_QJap"> → </code><code class="yellow_QJap">(</code><code class="yellow_QJap">)</code><code class="green_DgR4">)</code><code class="green_DgR4"> → </code><code class="green_DgR4">(</code><code class="green_DgR4">)</code></div><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code><span class="inlineDescription_G7Er">-- <span>
+<p>Called once all aliases are available; re-runs if the group is torn down and re-established</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/UniPlugin/api/UniPluginConnection">UniPluginConnection</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>A connection that can be closed to stop tracking imports</p>
+</span></span></div><div>
+<p>
+  Waits for all plugins in <code>aliases</code> to be exported, then calls <code>handler</code>
+  with two arguments:
+</p>
+<ul>
+  <li><code>plugins()</code> — returns all resolved UniPlugins in the same order as <code>aliases</code> via multiple returns.</li>
+  <li><code>bindOnImportClosed(fn)</code> — registers a single callback (overwriting any previous one) that fires whenever this import group is torn down, whether because one of the imported plugins closed naturally or because the returned listener was closed manually.</li>
+</ul>
+<p>
+  The handler re-runs automatically each time all aliases become available
+  again after a close. Duplicate aliases are silently deduplicated. Passing
+  an empty <code>aliases</code> table is a no-op and returns an inert connection.
+</p>
+<p>
+  Close the returned connection to stop listening entirely and tear down the
+  current import group.
+</p>
+<p><strong>Example Usage:</strong></p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> UniPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span>to<span class="token punctuation">.</span>module<span class="token punctuation">)</span><span class="token punctuation">(</span>plugin<span class="token punctuation">)</span>
+
+UniPlugin<span class="token punctuation">:</span><span class="token function">withImports</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">"athar-adv/Jexplorer"</span><span class="token punctuation">,</span> <span class="token string">"athar-adv/SimpleComplete"</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>plugins<span class="token punctuation">,</span> onImportClosed<span class="token punctuation">)</span>
+	<span class="token keyword">local</span> jexplorer<span class="token punctuation">,</span> simpleComplete <span class="token operator">=</span> <span class="token function">plugins</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+	<span class="token keyword">local</span> items <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+	<span class="token keyword">do</span>
+		<span class="token keyword">local</span> manager <span class="token operator">=</span> jexplorer<span class="token punctuation">:</span><span class="token function">getApi</span><span class="token punctuation">(</span><span class="token string">"manager"</span><span class="token punctuation">)</span>
+		manager<span class="token punctuation">.</span><span class="token function">setSetting</span><span class="token punctuation">(</span><span class="token string">"VirtualScrollFrameBuffer"</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span>
+		
+		table<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span>items<span class="token punctuation">,</span> manager<span class="token punctuation">.</span>ExplorerFrame<span class="token punctuation">.</span>ClassIconStyleRuleCreated<span class="token punctuation">:</span><span class="token function">Connect</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>rule<span class="token punctuation">)</span>
+			rule<span class="token punctuation">:</span><span class="token function">SetProperty</span><span class="token punctuation">(</span><span class="token string">"Image"</span><span class="token punctuation">,</span> <span class="token string">"rbxassetid://1234"</span><span class="token punctuation">)</span>
+		<span class="token keyword">end</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token keyword">end</span>
+	<span class="token keyword">do</span>
+		<span class="token keyword">local</span> selectionImports <span class="token operator">=</span> simpleComplete<span class="token punctuation">:</span><span class="token function">getApi</span><span class="token punctuation">(</span><span class="token string">"selectionImports"</span><span class="token punctuation">)</span>
+
+		selectionImports<span class="token punctuation">.</span><span class="token function">triggerAtCurrentPosition</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token keyword">end</span>
+	<span class="token function">onImportClosed</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+		<span class="token keyword">for</span> _<span class="token punctuation">,</span> v <span class="token keyword">in</span> items <span class="token keyword">do</span>
+			v<span class="token punctuation">:</span><span class="token function">Disconnect</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+		<span class="token keyword">end</span>
+	<span class="token keyword">end</span><span class="token punctuation">)</span>
+<span class="token keyword">end</span><span class="token punctuation">)</span>
+</code></pre>
+</div><h3>Errors</h3><table class="errorTable_jfN8"><thead><tr><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>&quot;UniPlugin &#x27;{self.plugin.Name}&#x27; is closed, cannot call UniPlugin:withImports(...)&quot;</td><td>Occurs if UniPlugin.isClosed is true.</td></tr></tbody></table><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="onClose"><code style="text-decoration:none">onClose</code><a href="#onClose" class="hash-link" aria-label="Direct link to onClose" title="Direct link to onClose">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/athar-adv/UniPlugin/blob/main/src/init.luau#L330"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>UniPlugin<!-- -->.</code><code class="green_DgR4">onClose</code><code>(</code><div class="inset_uKQm"><div><code>self<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/UniPlugin/api/UniPlugin">UniPlugin</a></code><code>,</code></div><div><code>fn<!-- -->: </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code><span class="inlineDescription_G7Er">-- <span>
+<p>Callback to invoke on plugin teardown</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/UniPlugin/api/UniPluginConnection">UniPluginConnection</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>A connection that can be closed to cancel the subscription</p>
+</span></span></div><div>
+<p>
+  Registers <code>fn</code> to be called when this plugin is torn down (i.e. when the
+  plugin unloads or is destroyed). Multiple listeners can be registered and
+  all will fire on close.
+</p>
+<p>
+  The returned listener's <code>close</code> unregisters <code>fn</code> and can be used to cancel
+  the subscription before the plugin closes.
+</p>
+<p><strong>Example Usage:</strong></p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> UniPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span>to<span class="token punctuation">.</span>module<span class="token punctuation">)</span><span class="token punctuation">(</span>plugin<span class="token punctuation">)</span>
+
+UniPlugin<span class="token punctuation">:</span><span class="token function">onClose</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Whyd you close my plugin :("</span><span class="token punctuation">)</span>
+<span class="token keyword">end</span><span class="token punctuation">)</span>
+</code></pre>
+</div><h3>Errors</h3><table class="errorTable_jfN8"><thead><tr><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>&quot;UniPlugin &#x27;{self.plugin.Name}&#x27; is closed, cannot call UniPlugin:onClose(...)&quot;</td><td>Occurs if UniPlugin.isClosed is true.</td></tr></tbody></table><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="setApi"><code style="text-decoration:none">setApi</code><a href="#setApi" class="hash-link" aria-label="Direct link to setApi" title="Direct link to setApi">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/athar-adv/UniPlugin/blob/main/src/init.luau#L370"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>UniPlugin<!-- -->.</code><code class="green_DgR4">setApi</code><code>(</code><div class="inset_uKQm"><div><code>self<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/UniPlugin/api/UniPlugin">UniPlugin</a></code><code>,</code></div><div><code>alias<!-- -->: </code><code class="blue_P4bS">string?</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>The alias to store the API under. Defaults to <code>"main"</code></p>
+</span></span></div><div><code>api<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/UniPlugin/api/UniPlugin#Api">Api</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The API table to store</p>
+</span></span></div></div><code>) → </code><code>(</code><code>)</code></div><div>
+<p>
+  Stores <code>api</code> under <code>alias</code> (defaults to <code>"main"</code>) on this UniPlugin.
+  Retrieve it from another plugin via <code>getApi</code>.
+</p>
+<p><strong>Example Usage:</strong></p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> UniPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span>to<span class="token punctuation">.</span>module<span class="token punctuation">)</span><span class="token punctuation">(</span>plugin<span class="token punctuation">)</span>
+
+UniPlugin<span class="token punctuation">:</span><span class="token function">setApi</span><span class="token punctuation">(</span><span class="token string">"output"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+	print <span class="token operator">=</span> print<span class="token punctuation">,</span>
+	warn <span class="token operator">=</span> warn<span class="token punctuation">,</span>
+	error <span class="token operator">=</span> error
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+UniPlugin<span class="token punctuation">:</span><span class="token function">setApi</span><span class="token punctuation">(</span><span class="token string">"requireInMyContext"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+	execute <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>module<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token function">require</span><span class="token punctuation">(</span>module<span class="token punctuation">)</span> <span class="token keyword">end</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+UniPlugin<span class="token punctuation">:</span><span class="token function">exportAs</span><span class="token punctuation">(</span><span class="token string">"athar-adv/MyPlugin"</span><span class="token punctuation">)</span>
+</code></pre>
+</div><h3>Errors</h3><table class="errorTable_jfN8"><thead><tr><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>&quot;UniPlugin &#x27;{self.plugin.Name}&#x27; is closed, cannot call UniPlugin:setApi(...)&quot;</td><td>Occurs if UniPlugin.isClosed is true.</td></tr></tbody></table><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="getApi"><code style="text-decoration:none">getApi</code><a href="#getApi" class="hash-link" aria-label="Direct link to getApi" title="Direct link to getApi">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/athar-adv/UniPlugin/blob/main/src/init.luau#L407"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>UniPlugin<!-- -->.</code><code class="green_DgR4">getApi</code><code>(</code><div class="inset_uKQm"><div><code>self<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/UniPlugin/api/UniPlugin">UniPlugin</a></code><code>,</code></div><div><code>alias<!-- -->: </code><code class="blue_P4bS">string?</code><span class="inlineDescription_G7Er">-- <span>
+<p>The alias to look up. Defaults to <code>"main"</code></p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/UniPlugin/api/UniPlugin#Api">Api</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The stored API table</p>
+</span></span></div><div>
+<p>
+  Returns the Api stored under <code>alias</code> (defaults to <code>"main"</code>).
+  Errors if no Api has been set for that alias.
+</p>
+<p><strong>Example Usage:</strong></p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> UniPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span>to<span class="token punctuation">.</span>module<span class="token punctuation">)</span><span class="token punctuation">(</span>plugin<span class="token punctuation">)</span>
+
+UniPlugin<span class="token punctuation">:</span><span class="token function">withImports</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">"athar-adv/Jexplorer"</span><span class="token punctuation">,</span> <span class="token string">"athar-adv/SimpleComplete"</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>plugins<span class="token punctuation">,</span> onImportClosed<span class="token punctuation">)</span>
+	<span class="token keyword">local</span> jexplorer<span class="token punctuation">,</span> simpleComplete <span class="token operator">=</span> <span class="token function">plugins</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+	<span class="token keyword">local</span> items <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+	<span class="token keyword">do</span>
+		<span class="token keyword">local</span> manager <span class="token operator">=</span> jexplorer<span class="token punctuation">:</span><span class="token function">getApi</span><span class="token punctuation">(</span><span class="token string">"manager"</span><span class="token punctuation">)</span>
+		<span class="token function">print</span><span class="token punctuation">(</span>manager<span class="token punctuation">.</span><span class="token function">executeJqlQuery</span><span class="token punctuation">(</span><span class="token string">"#?player"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+		<span class="token keyword">local</span> dependencies <span class="token operator">=</span> jexplorer<span class="token punctuation">:</span><span class="token function">getApi</span><span class="token punctuation">(</span><span class="token string">"dependencies"</span><span class="token punctuation">)</span>
+		<span class="token function">print</span><span class="token punctuation">(</span>dependencies<span class="token punctuation">.</span>GitApi<span class="token punctuation">)</span>
+	<span class="token keyword">end</span>
+	<span class="token keyword">do</span>
+		<span class="token keyword">local</span> editor <span class="token operator">=</span> simpleComplete<span class="token punctuation">:</span><span class="token function">getApi</span><span class="token punctuation">(</span><span class="token string">"editor"</span><span class="token punctuation">)</span>
+		<span class="token function">print</span><span class="token punctuation">(</span>editor<span class="token punctuation">.</span><span class="token function">getOpenDocValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>currentImportedModules<span class="token punctuation">)</span>
+	<span class="token keyword">end</span>
+<span class="token keyword">end</span><span class="token punctuation">)</span>
+</code></pre>
+</div><h3>Errors</h3><table class="errorTable_jfN8"><thead><tr><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>&quot;UniPlugin &#x27;{self.plugin.Name}&#x27; is closed, cannot call UniPlugin:getApi(...)&quot;</td><td>Occurs if UniPlugin.isClosed is true.</td></tr></tbody></table><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="close"><code style="text-decoration:none">close</code><a href="#close" class="hash-link" aria-label="Direct link to close" title="Direct link to close">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/athar-adv/UniPlugin/blob/main/src/init.luau#L434"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>UniPlugin<!-- -->.</code><code class="green_DgR4">close</code><code>(</code><code>self<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/UniPlugin/api/UniPlugin">UniPlugin</a></code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>
+  Closes this UniPlugin. Cleans up any connections, fires <code>onClose</code> handlers,
+  and makes all methods error on subsequent calls.
+</p>
+<p><strong>Example Usage:</strong></p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> UniPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span>to<span class="token punctuation">.</span>module<span class="token punctuation">)</span><span class="token punctuation">(</span>plugin<span class="token punctuation">)</span>
+
+<span class="token comment">--[[snip!]]</span>
+
+closePluginButton<span class="token punctuation">.</span>Activated<span class="token punctuation">:</span><span class="token function">Connect</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	UniPlugin<span class="token punctuation">:</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">end</span><span class="token punctuation">)</span>
+
+UniPlugin<span class="token punctuation">:</span><span class="token function">onClose</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token keyword">for</span> _<span class="token punctuation">,</span> v <span class="token keyword">in</span> connections <span class="token keyword">do</span> v<span class="token punctuation">:</span><span class="token function">Disconnect</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">end</span>
+<span class="token keyword">end</span><span class="token punctuation">)</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="openUniPlugin"><code style="text-decoration:none">openUniPlugin</code><a href="#openUniPlugin" class="hash-link" aria-label="Direct link to openUniPlugin" title="Direct link to openUniPlugin">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/athar-adv/UniPlugin/blob/main/src/init.luau#L466"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>UniPlugin<!-- -->.</code><code class="green_DgR4">openUniPlugin</code><code>(</code><div class="inset_uKQm"><div><code>plugin<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Plugin" target="_blank" rel="noopener noreferrer">Plugin<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The Roblox Plugin instance to wrap</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/UniPlugin/api/UniPlugin">UniPlugin</a></code></div><div>
+<p>
+  Returns the UniPlugin instance for the given <code>plugin</code>, creating it if one
+  doesn't already exist. Only one UniPlugin is ever created per Plugin
+  instance for the lifetime of the studio session.
+</p>
+<p>
+  Automatically connects to <code>plugin.Unloading</code> and <code>plugin.Destroying</code> to
+  fire all <code>onClose</code> listeners and close all active <code>withImports</code> and
+  <code>exportAs</code> listeners when the plugin is torn down.
+</p>
+</div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
+    &quot;functions&quot;: [
+        {
+            &quot;name&quot;: &quot;exportAs&quot;,
+            &quot;desc&quot;: &quot;Registers this UniPlugin under `alias` in the shared exports table, making\nit discoverable by other plugins calling `withImports`. Fires the global\nExportOpened event so any waiting `withImports` listeners are unblocked.\n\nThe returned listener&#x27;s `close` removes the export and can be called\nmanually; it is also called automatically when the plugin unloads or is\ndestroyed.\n\n\n**Example Usage:**\n```lua\nlocal UniPlugin = require(path.to.module)(plugin)\n\nUniPlugin:setApi(\&quot;output\&quot;, {\n\tprint = print,\n\twarn = warn,\n\terror = error\n})\nUniPlugin:setApi(\&quot;requireInMyContext\&quot;, {\n\texecute = function(module) return require(module) end\n})\nUniPlugin:exportAs(\&quot;athar-adv/MyPlugin\&quot;)&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;self&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;UniPlugin&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;alias&quot;,
+                    &quot;desc&quot;: &quot;The name to register this plugin under&quot;,
+                    &quot;lua_type&quot;: &quot;string&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;A connection that can be closed to unregister the export&quot;,
+                    &quot;lua_type&quot;: &quot;UniPluginConnection&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;errors&quot;: [
+                {
+                    &quot;lua_type&quot;: &quot;\&quot;UniPlugin &#x27;{self.plugin.Name}&#x27; is closed, cannot call UniPlugin:exportAs(...)\&quot;&quot;,
+                    &quot;desc&quot;: &quot;Occurs if UniPlugin.isClosed is true.&quot;
+                }
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 119,
+                &quot;path&quot;: &quot;src/init.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;withImports&quot;,
+            &quot;desc&quot;: &quot;Waits for all plugins in `aliases` to be exported, then calls `handler`\nwith two arguments:\n- `plugins()` — returns all resolved UniPlugins in the same order as `aliases` via multiple returns.\n- `bindOnImportClosed(fn)` — registers a single callback (overwriting any previous one) that fires whenever this import group is torn down, whether because one of the imported plugins closed naturally or because the returned listener was closed manually.\n\nThe handler re-runs automatically each time all aliases become available\nagain after a close. Duplicate aliases are silently deduplicated. Passing\nan empty `aliases` table is a no-op and returns an inert connection.\n\nClose the returned connection to stop listening entirely and tear down the\ncurrent import group.\n\n\n**Example Usage:**\n```lua\nlocal UniPlugin = require(path.to.module)(plugin)\n\nUniPlugin:withImports({\&quot;athar-adv/Jexplorer\&quot;, \&quot;athar-adv/SimpleComplete\&quot;}, function(plugins, onImportClosed)\n\tlocal jexplorer, simpleComplete = plugins()\n\n\tlocal items = {}\n\tdo\n\t\tlocal manager = jexplorer:getApi(\&quot;manager\&quot;)\n\t\tmanager.setSetting(\&quot;VirtualScrollFrameBuffer\&quot;, 20)\n\t\t\n\t\ttable.insert(items, manager.ExplorerFrame.ClassIconStyleRuleCreated:Connect(function(rule)\n\t\t\trule:SetProperty(\&quot;Image\&quot;, \&quot;rbxassetid://1234\&quot;)\n\t\tend))\n\tend\n\tdo\n\t\tlocal selectionImports = simpleComplete:getApi(\&quot;selectionImports\&quot;)\n\n\t\tselectionImports.triggerAtCurrentPosition()\n\tend\n\tonImportClosed(function()\n\t\tfor _, v in items do\n\t\t\tv:Disconnect()\n\t\tend\n\tend)\nend)&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;self&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;UniPlugin&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;aliases&quot;,
+                    &quot;desc&quot;: &quot;List of plugin export aliases to wait for&quot;,
+                    &quot;lua_type&quot;: &quot;{string}&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;handler&quot;,
+                    &quot;desc&quot;: &quot;Called once all aliases are available; re-runs if the group is torn down and re-established&quot;,
+                    &quot;lua_type&quot;: &quot;(plugins: () -&gt; ...UniPlugin, bindOnImportClosed: (fn: () -&gt; ()) -&gt; ()) -&gt; ()&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;A connection that can be closed to stop tracking imports&quot;,
+                    &quot;lua_type&quot;: &quot;UniPluginConnection&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;errors&quot;: [
+                {
+                    &quot;lua_type&quot;: &quot;\&quot;UniPlugin &#x27;{self.plugin.Name}&#x27; is closed, cannot call UniPlugin:withImports(...)\&quot;&quot;,
+                    &quot;desc&quot;: &quot;Occurs if UniPlugin.isClosed is true.&quot;
+                }
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 191,
+                &quot;path&quot;: &quot;src/init.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;onClose&quot;,
+            &quot;desc&quot;: &quot;Registers `fn` to be called when this plugin is torn down (i.e. when the\nplugin unloads or is destroyed). Multiple listeners can be registered and\nall will fire on close.\n\nThe returned listener&#x27;s `close` unregisters `fn` and can be used to cancel\nthe subscription before the plugin closes.\n\n\n**Example Usage:**\n```lua\nlocal UniPlugin = require(path.to.module)(plugin)\n\nUniPlugin:onClose(function()\n\tprint(\&quot;Whyd you close my plugin :(\&quot;)\nend)&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;self&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;UniPlugin&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;fn&quot;,
+                    &quot;desc&quot;: &quot;Callback to invoke on plugin teardown&quot;,
+                    &quot;lua_type&quot;: &quot;() -&gt; ()&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;A connection that can be closed to cancel the subscription&quot;,
+                    &quot;lua_type&quot;: &quot;UniPluginConnection&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;errors&quot;: [
+                {
+                    &quot;lua_type&quot;: &quot;\&quot;UniPlugin &#x27;{self.plugin.Name}&#x27; is closed, cannot call UniPlugin:onClose(...)\&quot;&quot;,
+                    &quot;desc&quot;: &quot;Occurs if UniPlugin.isClosed is true.&quot;
+                }
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 330,
+                &quot;path&quot;: &quot;src/init.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;setApi&quot;,
+            &quot;desc&quot;: &quot;Stores `api` under `alias` (defaults to `\&quot;main\&quot;`) on this UniPlugin.\nRetrieve it from another plugin via `getApi`.\n\n\n**Example Usage:**\n```lua\nlocal UniPlugin = require(path.to.module)(plugin)\n\nUniPlugin:setApi(\&quot;output\&quot;, {\n\tprint = print,\n\twarn = warn,\n\terror = error\n})\nUniPlugin:setApi(\&quot;requireInMyContext\&quot;, {\n\texecute = function(module) return require(module) end\n})\nUniPlugin:exportAs(\&quot;athar-adv/MyPlugin\&quot;)&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;self&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;UniPlugin&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;alias&quot;,
+                    &quot;desc&quot;: &quot;The alias to store the API under. Defaults to `\&quot;main\&quot;`&quot;,
+                    &quot;lua_type&quot;: &quot;string?&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;api&quot;,
+                    &quot;desc&quot;: &quot;The API table to store&quot;,
+                    &quot;lua_type&quot;: &quot;Api&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;errors&quot;: [
+                {
+                    &quot;lua_type&quot;: &quot;\&quot;UniPlugin &#x27;{self.plugin.Name}&#x27; is closed, cannot call UniPlugin:setApi(...)\&quot;&quot;,
+                    &quot;desc&quot;: &quot;Occurs if UniPlugin.isClosed is true.&quot;
+                }
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 370,
+                &quot;path&quot;: &quot;src/init.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;getApi&quot;,
+            &quot;desc&quot;: &quot;Returns the Api stored under `alias` (defaults to `\&quot;main\&quot;`).\nErrors if no Api has been set for that alias.\n\n\n**Example Usage:**\n```lua\nlocal UniPlugin = require(path.to.module)(plugin)\n\nUniPlugin:withImports({\&quot;athar-adv/Jexplorer\&quot;, \&quot;athar-adv/SimpleComplete\&quot;}, function(plugins, onImportClosed)\n\tlocal jexplorer, simpleComplete = plugins()\n\n\tlocal items = {}\n\tdo\n\t\tlocal manager = jexplorer:getApi(\&quot;manager\&quot;)\n\t\tprint(manager.executeJqlQuery(\&quot;#?player\&quot;))\n\n\t\tlocal dependencies = jexplorer:getApi(\&quot;dependencies\&quot;)\n\t\tprint(dependencies.GitApi)\n\tend\n\tdo\n\t\tlocal editor = simpleComplete:getApi(\&quot;editor\&quot;)\n\t\tprint(editor.getOpenDocValue().currentImportedModules)\n\tend\nend)&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;self&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;UniPlugin&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;alias&quot;,
+                    &quot;desc&quot;: &quot;The alias to look up. Defaults to `\&quot;main\&quot;`&quot;,
+                    &quot;lua_type&quot;: &quot;string?&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The stored API table&quot;,
+                    &quot;lua_type&quot;: &quot;Api&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;errors&quot;: [
+                {
+                    &quot;lua_type&quot;: &quot;\&quot;UniPlugin &#x27;{self.plugin.Name}&#x27; is closed, cannot call UniPlugin:getApi(...)\&quot;&quot;,
+                    &quot;desc&quot;: &quot;Occurs if UniPlugin.isClosed is true.&quot;
+                }
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 407,
+                &quot;path&quot;: &quot;src/init.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;close&quot;,
+            &quot;desc&quot;: &quot;Closes this UniPlugin. Cleans up any connections, fires `onClose` handlers,\nand makes all methods error on subsequent calls.\n\n\n**Example Usage:**\n```lua\nlocal UniPlugin = require(path.to.module)(plugin)\n\n--[[snip!]]\n\nclosePluginButton.Activated:Connect(function()\n\tUniPlugin:close()\nend)\n\nUniPlugin:onClose(function()\n\tfor _, v in connections do v:Disconnect() end\nend)&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;self&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;UniPlugin&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 434,
+                &quot;path&quot;: &quot;src/init.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;openUniPlugin&quot;,
+            &quot;desc&quot;: &quot;Returns the UniPlugin instance for the given `plugin`, creating it if one\ndoesn&#x27;t already exist. Only one UniPlugin is ever created per Plugin\ninstance for the lifetime of the studio session.\n\nAutomatically connects to `plugin.Unloading` and `plugin.Destroying` to\nfire all `onClose` listeners and close all active `withImports` and\n`exportAs` listeners when the plugin is torn down.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;plugin&quot;,
+                    &quot;desc&quot;: &quot;The Roblox Plugin instance to wrap&quot;,
+                    &quot;lua_type&quot;: &quot;Plugin&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;UniPlugin&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 466,
+                &quot;path&quot;: &quot;src/init.luau&quot;
+            }
+        }
+    ],
+    &quot;properties&quot;: [
+        {
+            &quot;name&quot;: &quot;plugin&quot;,
+            &quot;desc&quot;: &quot;The Plugin this UniPlugin is associated with.&quot;,
+            &quot;lua_type&quot;: &quot;Plugin&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 41,
+                &quot;path&quot;: &quot;src/init.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;apis&quot;,
+            &quot;desc&quot;: &quot;All registered public apis.&quot;,
+            &quot;lua_type&quot;: &quot;{[string]: Api}&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 46,
+                &quot;path&quot;: &quot;src/init.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;isClosed&quot;,
+            &quot;desc&quot;: &quot;If `UniPlugin:close()` has been called. If this is true, calling any method will throw an error.&quot;,
+            &quot;lua_type&quot;: &quot;boolean&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 51,
+                &quot;path&quot;: &quot;src/init.luau&quot;
+            }
+        }
+    ],
+    &quot;types&quot;: [
+        {
+            &quot;name&quot;: &quot;Api&quot;,
+            &quot;desc&quot;: &quot;A publicly exported interface for the UniPlugin.&quot;,
+            &quot;lua_type&quot;: &quot;{[string]: any}&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 15,
+                &quot;path&quot;: &quot;src/init.luau&quot;
+            }
+        }
+    ],
+    &quot;name&quot;: &quot;UniPlugin&quot;,
+    &quot;desc&quot;: &quot;Wraps a Roblox `Plugin` instance to provide a shared\nexport/import system between plugins.&quot;,
+    &quot;source&quot;: {
+        &quot;line&quot;: 36,
+        &quot;path&quot;: &quot;src/init.luau&quot;
+    }
+}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a><ul><li><a href="#Api" class="table-of-contents__link toc-highlight">Api</a></li></ul></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a><ul><li><a href="#apis" class="table-of-contents__link toc-highlight">apis</a></li><li><a href="#isClosed" class="table-of-contents__link toc-highlight">isClosed</a></li><li><a href="#plugin" class="table-of-contents__link toc-highlight">plugin</a></li></ul></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#close" class="table-of-contents__link toc-highlight">.close</a></li><li><a href="#exportAs" class="table-of-contents__link toc-highlight">.exportAs</a></li><li><a href="#getApi" class="table-of-contents__link toc-highlight">.getApi</a></li><li><a href="#onClose" class="table-of-contents__link toc-highlight">.onClose</a></li><li><a href="#openUniPlugin" class="table-of-contents__link toc-highlight">.openUniPlugin</a></li><li><a href="#setApi" class="table-of-contents__link toc-highlight">.setApi</a></li><li><a href="#withImports" class="table-of-contents__link toc-highlight">.withImports</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 athar-adv. Built with Moonwave and Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
